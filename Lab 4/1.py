@@ -200,39 +200,80 @@ def create_fractal():
     fractal[1] = fractal
     fractal[2] = fractal
     print(fractal)
+#16
+def fixed_continue_fibonacci_sequence(sequence,n):
+    for i in range(n):
+        next_element = sequence[-1] + sequence[-2]
+        sequence.append(next_element)
+#17
+def fixed_mirror(arr):
+    mirrored_part = arr[::-1]
+    arr.extend(mirrored_part)
+#18
+def from_string_to_list(string, container):
+    for part in string.split():
+        container.append(int(part))
+#19
+def  transpose(matrix):
+    matrix[:]=[list(row) for row in zip(*matrix)]
+    # zip(*matrix) берет строки и группирует элементы с одинаковыми индексами в кортежи.
+    # Так первая строка становится первым столбцом и т.д.
+    # [list(row) for ... ] превращает эти кортежи обратно в списки.
+    # matrix[:] = ... обновляет исходный список "на месте".
+#20
+def swap(first, second):
+    first[:], second[:] = second[:], first[:]
+
 def main():
+    # print("Тест для 1:")
     # num_1()
+    # print("-------------------------")
+    # print("Тест для 2:")
     # num_2()
+    # print("-------------------------")    
     # #3
+    # print("Тест для 3:")
     # triangle(1, 1, 2)
     # triangle(7, 6, 10)
     # triangle(20, 13, 17)
+    # print("-------------------------")
     # #4
+    # print("Тест для 4:")
     # print("Введите координаты для 4: ")
     # x1 = float(input("Введите x1 для 4: "))
     # x2 = float(input("Введите x2 для 4: "))
     # y1 = float(input("Введите y1 для 4: "))
     # y2 = float(input("Введите y2 для 4: "))
     # print(f"Расстояние между точками: {distance(x1, y1, x2, y2)}")
+    # print("-------------------------")
     # #5
+    # print("Тест для 5:")
     # print(number_to_words(4))
     # print(number_to_words(12))
     # print(number_to_words(42))
     # print(number_to_words(67))
+    # print("-------------------------")
     # #6
+    # print("Тест для 6:")
     # bracket_check("()")
     # bracket_check("(()((")
     # bracket_check("")
+    # print("-------------------------")
     # #7
+    # print("Тест для 7:")
     # print(palindrome_check("А роза упала на лапу Азора"))
     # print(palindrome_check("Палиндром"))
+    # print("-------------------------")
     # #8
+    # print("Тест для 8:")
     # data ="""0 - 0
     # x x x
     # 0 0 -"""
     # field = [line.split() for line in data.split('\n')]
     # tic_tac_toe(field)
+    # print("-------------------------")
     # #9
+    # print("Тест для 9:")
     # print_without_duplicates("Привет")
     # print_without_duplicates("Не могу до тебя дозвониться")
     # print_without_duplicates("Не могу до тебя дозвониться")
@@ -240,20 +281,90 @@ def main():
     # print_without_duplicates("Когда доедешь до дома")
     # print_without_duplicates("Ага, жду")
     # print_without_duplicates("Ага, жду")
+    # print("-------------------------")
     # #10
+    # print("Тест для 10:")
     # add_friends("Алла", ["Марина", "Иван"])
     # print(are_friends("Алла", "Мария"))
     # add_friends("Алла", ["Мария"])
     # print(are_friends("Алла", "Мария"))
+    # print("-------------------------")
     # #11
+    # print("Тест для 11:")
     # roman()
+    # print("-------------------------")
     # #12
+    # print("Тест для 12:")
     # demostratete_diff()
+    # print("-------------------------")
     # #13
+    # print("Тест для 13:")
     # demonstrate_sorting()
+    # print("-------------------------")
     # #14
+    # print("Тест для 14:")
     # fixed()
+    # print("-------------------------")
     # #15
-    create_fractal()
+    # print("Тест для 15:")
+    # create_fractal()
+    # print("-------------------------")
+    # #16
+    # print("Тест для 16:")
+    # sequence1=[1, 1]
+    # fixed_continue_fibonacci_sequence(sequence1, 1)
+    # print(f"Последовательность Фибоначчи: {sequence1}")
+    # sequence2=[1, 1, 2, 3, 5]
+    # fixed_continue_fibonacci_sequence(sequence2, 0)
+    # print(f"Последовательность Фибоначчи: {sequence2}")
+    # print("-------------------------")
+    # #17
+    # print("Тест для 17:")
+    # arr1 =[1, 2]
+    # fixed_mirror(arr1)
+    # print(f"Массив после зеркального расширения: {arr1}")
+    # arr2 =[1]
+    # fixed_mirror(arr2)
+    # print(f"Массив после зеркального расширения: {arr2}")
+    # print("-------------------------")
+    # #18
+    # print("Тест для 18:")
+    # a = [1, 2, 3]
+    # from_string_to_list("1 3 99 52", a)
+    # print(f"Список после добавления элементов из строки: {a}")
+    # a = [77,'abc']
+    # from_string_to_list("", a)
+    # print(f"Список после добавления элементов из строки: {a}")
+    # print("-------------------------")
+    # #19
+    # print("Тест для 19:")
+    # matrix1 = [[1]]
+    # transpose(matrix1)
+    # print("Транспонированная матрица 1:")
+    # for line in matrix1:
+    #     print(*line)
+    # matrix2 = [[1,2], [3,4]]
+    # transpose(matrix2)
+    # print("Транспонированная матрица 2:")
+    # for line in matrix2:
+    #     print(*line)
+    # print("-------------------------")
+    # #20
+    # print("Тест для 20:")
+    # first = [1, 2, 3]
+    # second = [4, 5, 6]
+    # first_content = first[:]
+    # second_content = second[:]
+    # swap(first, second)
+    # print(first, second_content, first == second_content)
+    # print(second, first_content, second == first_content)
+    # first = [1, 2, 3]
+    # second = [4, 5, 6, 7]
+    # first_content = first[:]
+    # second_content = second[:]
+    # swap(first, second)
+    # print(first, second_content, first == second_content)
+    # print(second, first_content, second == first_content)
+    # print("-------------------------")
 if __name__ == "__main__":
     main()
